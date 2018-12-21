@@ -1,0 +1,15 @@
+
+birincisayi = int(input("1. Sayıyı Yazınız : "))
+ikincisayi = int(input("2. Sayıyı Yazınız : "))
+ucuncusayi = int(input("3. Sayıyı Yazınız : "))
+dorduncusayi = int(input("4. Sayıyı Yazınız : "))
+besincisayi = int(input("5. Sayıyı Yazınız : "))
+liste = int("birincisayi","ikincisayi","ucuncusayi","dorduncusayi","besincisayi") 
+dosya = open(r"C:\221120181018\221120181019_sonuc.txt","w")
+
+
+for j in range(5):
+    dosya.write(liste[j] +"")
+dosya.close()
+liste.sort(reverse=True)
+print(liste)
