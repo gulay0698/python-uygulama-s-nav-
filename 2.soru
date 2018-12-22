@@ -1,0 +1,44 @@
+gırıln = str(input("Bir cümle gir: "))
+print("A-) Cümlenin ters hali: \n"+gırıln[::-1])
+print("B-) Kelime kelime bölme")
+gırılns = gırıln.split()
+print(gırılns)
+print("C-) kelimelerin harf sayıları")
+for i in range(len(gırılns)):
+    print(len(gırılns[i]))
+print("D-) Kelimelerin Kendi içinde ters çevirme")
+for i in range(len(gırılns)):
+    kelime = gırılns[i]
+    kelime1 = kelime[::-1]
+    print(kelime1)
+    sesliharfler = "aeuüıioö"
+    sessizharfler = "bcçdfgğhjklmnprsştvyz"
+
+    sesli = ""
+    sessiz = ""
+for i in gırıln:
+    if i in sesliharfler:
+        sesli += i
+    else:
+        sessiz += i
+print("E-) Unlü unsüz harfler")
+print("Sesli harfler: ", sesli)
+print("Sessiz harfler: ", sessiz)
+
+
+print("F-) Kucuk unlu uygunlugu")
+
+kalinharf="a, ı, o, u."
+inceharf= "e, i, ö, ü"
+harf=""
+
+for i in gırıln:
+    harf+=i
+    if i in kalinharf:
+
+        print("Küçük ünlü uyumu yok. ")
+        break
+    else:
+
+     if i in inceharf:
+              print("Küçük ünlü uyumu var. ")
