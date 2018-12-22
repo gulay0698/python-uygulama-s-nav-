@@ -1,0 +1,5 @@
+soru=0
+for i in range(1,1001):
+    soru=soru+i**i
+    x=soru%1000000000
+    print(x)
