@@ -1,0 +1,39 @@
+import math
+
+sayi = False
+
+toplam = 5
+
+def makearray(sayi):
+    array = []
+    for iteration in range(int(math.log10(sayi)+1)):
+
+        array.append(sayi % 10)
+        sayi //= 10
+
+    return array
+
+def checkarray(array1, array2):
+
+        for digit in array1:
+            if digit not in array2:
+                return False
+        return True
+
+while sayi == False:
+    for sayi1 in range(10 * toplam, (10 * (toplam + 1))//6):
+
+
+        a=makearray(sayi1)
+        b=makearray(sayi1*2)
+        c=makearray(sayi1*3)
+        d=makearray(sayi1*4)
+        e=makearray(sayi1*5)
+        f=makearray(sayi1*6)
+
+
+        if checkarray(a,b) == checkarray(a,c) == checkarray(a,d) == checkarray(a,f) == checkarray(a,f) == True:
+            print(sayi1)
+            sayi = True
+
+    toplam += 1
